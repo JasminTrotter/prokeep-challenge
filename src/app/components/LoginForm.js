@@ -42,27 +42,29 @@ export const LoginForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label for="email">Email:</label>
+    <form className='m-8 rounded-md p-6' onSubmit={handleSubmit}>
+      <div className='mb-2'>
+        <label for='email'>Email:</label>
         <input
-          type="email"
-          id="email"
+          className='border-2 rounded-md ml-2 px-2'
+          type='email'
+          id='email'
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
       </div>
-      <div>
-        <label for="password">Password:</label>
+      <div className='mb-6'>
+        <label for='password'>Password:</label>
         <input
-          id="password"
-          type="password"
+          className='border-2 rounded-md ml-2 px-2'
+          id='password'
+          type='password'
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
-      {validationError && <div>{validationError}</div>}
-      <button type="submit">Login</button>
+      <button className='mb-2 px-4 border-2 rounded-md' type='submit'>Login</button>
+      {validationError && <div className='text-red-600'>{validationError}</div>}
     </form>
   );
 };
