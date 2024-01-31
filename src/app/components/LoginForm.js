@@ -44,16 +44,18 @@ export const LoginForm = () => {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label>Email:</label>
+        <label for="email">Email:</label>
         <input
           type="email"
+          id="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
       </div>
       <div>
-        <label>Password:</label>
+        <label for="password">Password:</label>
         <input
+          id="password"
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
